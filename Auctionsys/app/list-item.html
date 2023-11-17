@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>商品上架页</title>
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+ <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="./app.js"></script>
+</head>
+<body>
+ <div class="container">
+  <h1>上架商品</h1>
+  <div class="container">
+   <div style="margin-top:35px" class="row">
+    <div style="display: none;" class="alert alert-success" id="msg"></div>
+    <form class="form-horizontal col-sm-5" id="add-item-to-store">
+     <div class="form-group">
+      <label for="product-name" class="col-sm-2 control-label">商品名称</label>
+      <div class="col-sm-10">
+       <input type="text" name="product-name" class="form-control" id="product-name" placeholder="例如 iPhone，AJ 等竞价商品" required="required"></input>
+      </div>
+     </div>
+     <div class="form-group">
+      <label for="product-category" class="col-sm-2 control-label">种类</label>
+      <div class="col-sm-10">
+       <select class="form-control" name="product-category" id="product-category">
+        <option value="Art">艺术品</option>
+        <option value="Books">书本</option>
+        <option value="Cameras">摄像机</option>
+        <option value="Cell Phones & Accessories">移动设备</option>
+        <option value="Clothing">衣物</option>
+        <option value="Coins & Paper Money">钱币</option>
+        <option value="Collectibles">收藏品</option>
+        <option value="Computers/Tablets & Networking">电脑等网络设备</option>
+        <option value="Consumer Electronics">家用电子产品</option>
+        <option value="Crafts">工艺品</option>
+        <option value="DVDs & Movies">影像与影音</option>
+        <option value="Entertainment Memorabilia">纪念品</option>
+        <option value="Gift Cards & Coupons">礼品卡与优惠劵</option>
+        <option value="Music">音乐</option>
+        <option value="Musical Instruments & Gear">乐器</option>
+        <option value="Pet Supplies">宠物用品</option>
+        <option value="Pottery & Glass">易碎品</option>
+        <option value="Sporting Goods">体育用品</option>
+        <option value="Stamps">邮票</option>
+        <option value="Tickets">通行证</option>
+        <option value="Toys & Hobbies">玩具</option>
+        <option value="Video Games">电子游戏</option>
+       </select>
+      </div>
+     </div>
+     <div class="form-group">
+      <label for="product-price" class="col-sm-2 control-label">起价</label>
+      <div class="col-sm-10">
+       <input type="text" class="form-control" name="product-price" id="product-price" placeholder="Ether" required="required"></input>
+      </div>
+     </div>
+     <div class="form-group">
+      <label for="product-condition" class="col-sm-2 control-label">使用痕迹</label>
+      <div class="col-sm-10">
+       <select class="form-control" name="product-condition" id="product-condition">
+        <option value="1">崭新</option>
+        <option value="2">二手</option>
+       </select>
+      </div>
+     </div>
+     <div class="form-group">
+      <label for="product-auction-start" class="col-sm-2 control-label">拍卖起始时间</label>
+      <div class="col-sm-10">
+       <input type="datetime-local" class="form-control" name="product-auction-start" id="product-auction-start" required="required"></input>
+      </div>
+     </div>
+     <div class="form-group">
+      <label for="product-auction-end" class="col-sm-2 control-label">拍卖持续时间</label>
+      <div class="col-sm-10">
+       <select class="form-control" name="product-auction-end" id="product-auction-end">
+        <option value="1">一天</option>
+        <option value="3">三天</option>
+        <option value="5">五天</option>
+        <option value="7">七天</option>
+        <option value="10">十天</option>
+       </select>
+      </div>
+     </div>
+     <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+       <button type="submit" class="btn btn-primary">上架至商店</button>
+      </div>
+     </div>
+    </form>
+   </div>
+  </div>
+ </div>
+</body>
+</html>
