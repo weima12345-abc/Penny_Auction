@@ -4,42 +4,38 @@
 Webpack Truffle Box
 This box it our most bare official implementation with Webpack. Includes contracts, migrations, tests, user interface and webpack build pipeline.
 
-Installation
-Install Truffle globally.
-
+1. 下载全局truffe
 npm install -g truffle
-Download the box. This also takes care of installing the necessary dependencies.
 
+2. 下载依赖
 truffle unbox webpack
-Run the development console.
 
+3. 运行
 truffle develop
-Compile and migrate the smart contracts. Note inside the development console we don't preface commands with truffle.
 
+4. 编译和迁移智能合约。请注意，在开发控制台中，我们不会在命令前面加上truffle
 compile
 migrate
-Run the webpack server for front-end hot reloading (outside the development console). Smart contract changes must be manually recompiled and migrated.
 
+5.运行 webpack 服务器进行前端热重载（在开发控制台之外）。智能合约更改必须手动重新编译和迁移。
 // Serves the front-end on http://localhost:8080
 npm run dev
-Truffle can run tests written in Solidity or JavaScript against your smart contracts. Note the command varies slightly if you're in or outside of the development console.
 
-// If inside the development console.
+6.Truffle 可以针对您的智能合约运行用 Solidity 或 JavaScript 编写的测试。请注意，如果您在开发控制台内或外部，该命令会略有不同。
 test
-
 // If outside the development console..
 truffle test
-FAQ
-How do I use this with the EthereumJS TestRPC?
 
-It's as easy as modifying the config file! Check out our documentation on adding network configurations. Depending on the port you're using, you'll also need to update lines 96 and 98 of app/javascripts/app.js.
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 
-I'm encountering this error: Error: Can't resolve '../build/contracts/MetaCoin.json'
+其他
 
-This means you haven't compiled or migrated your contracts yet. Run truffle develop, compile and migrate first.
+如何将其与 EthereumJS TestRPC 一起使用？
+就像修改配置文件一样简单！查看有关添加网络配置的文档。根据您使用的端口，您还需要更新 的第 96 行和第 98 行。app/javascripts/app.js
 
-Full error:
+我遇到以下错误：错误：无法解决“../build/contracts/MetaCoin.json'
+这意味着您尚未编译或迁移合同。运行 ，然后首先运行。truffle developcompilemigrate
 
+完整错误：
 ERROR in ./app/main.js
-Module not found: Error: Can't resolve '../build/contracts/MetaCoin.json' in '/Users/tim/Documents/workspace/Consensys/test3/app'
- @ ./app/main.js 11:16-59
+Module not found: Error: Can't resolve '../build/contracts/MetaCoin.json' in '/Users/tim/Documents/workspace/Consensys/test3/app'@ ./app/main.js 11:16-59
